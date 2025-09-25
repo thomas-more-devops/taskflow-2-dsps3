@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container">
+        <!-- ============================= HEADER ============================= -->
         <header class="header">
             <div class="header-content">
                 <h1 class="app-title">
@@ -19,9 +20,12 @@
             </div>
         </header>
 
+        <!-- ============================== MAIN ============================== -->
         <main class="main">
+            <!-- -------- Task Input Section -------- -->
             <div class="task-input-section">
                 <div class="input-container">
+                    <!-- aria-label supplies a name when no visible <label> -->
                     <input type="text" id="taskInput" placeholder="What needs to be done?" class="task-input">
                     <button id="addTaskBtn" class="add-btn">
                         <span class="add-icon">+</span>
@@ -30,14 +34,17 @@
                 </div>
             </div>
 
+            <!-- -------- Tasks Section -------- -->
             <div class="tasks-section">
                 <div class="tasks-header">
                     <h2>Your Tasks</h2>
+                    <!-- Live region so count updates are announced by screen readers -->
                     <span id="taskCount" class="task-count">0 tasks</span>
                 </div>
                 <div id="tasksList" class="tasks-list">
                     <!-- Tasks will be dynamically added here -->
                 </div>
+                <!-- Toggle visibility via JS (e.g., hidden/aria-hidden) -->
                 <div id="emptyState" class="empty-state">
                     <div class="empty-icon">✨</div>
                     <h3>No tasks yet</h3>
@@ -45,6 +52,7 @@
                 </div>
             </div>
 
+            <!-- -------- Stats Section -------- -->
             <div class="stats-section">
                 <div class="stats-grid">
                     <div class="stat-card">
@@ -63,11 +71,14 @@
             </div>
         </main>
 
+        <!-- ============================= FOOTER ============================= -->
         <footer class="footer">
+            <!-- Keep year current if public -->
             <p>&copy; 2024 TaskFlow. Built with HTML, CSS, and JavaScript.</p>
         </footer>
     </div>
 
+     <!-- ============================== SCRIPTS ============================= -->
     <script src="scripts/app.js"></script>
 </body>
 </html>
